@@ -1,0 +1,100 @@
+
+body{
+  margin:20px;
+  background-color: rgb(95, 102, 104);
+}
+
+.App{
+  grid-template-columns: 1fr;
+}
+
+@media(min-width: 600px){
+  .App{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+
+}
+
+
+.saved-notes{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-auto-rows: minmax(250px,auto);
+  gap:40px;
+}
+
+.notes-item{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0c0303;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(228, 203, 171);
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.notes-header{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.notes-header button{
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: fit-content;
+}
+
+h2{
+  margin: 0;
+}
+
+.new-note{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+textarea, input{
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(228, 226, 224);
+}
+
+.new-note button{
+  border-radius: 5px;
+  background-color: rgb(4, 4, 7);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.new-note button:hover{
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.edit-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.edit-buttons button{
+  flex:1;
+}
+
+.edit-buttons button:last-of-type{
+  background-color: red;
+  color: aliceblue;
+}
